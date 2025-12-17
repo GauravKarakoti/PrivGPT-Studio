@@ -1100,7 +1100,17 @@ export default function ChatPage() {
 
         if (sessionId === "1" && data.session_id) {
           setSessionId(data.session_id);
-          // Don't use localStorage for logged-in users - backend tracks via User.chat_sessions
+
+          // Update sidebar immediately with new session
+          const newSession: ChatSession = {
+            id: data.session_id,
+            lastMessage: bot_response,
+            sessionName: "How can I help you?", // Default name from backend
+          };
+          setChatSessions((prev) => [newSession, ...prev]);
+          if (newChatSessionBtnRef.current) {
+            newChatSessionBtnRef.current.disabled = false;
+          }
         }
 
         const assistantMessage: Message = {
@@ -1221,7 +1231,17 @@ export default function ChatPage() {
                   case "complete":
                     if (data.session_id && sessionId === "1") {
                       setSessionId(data.session_id);
-                      // Don't use localStorage for logged-in users - backend tracks via User.chat_sessions
+
+                      // Update sidebar immediately with new session
+                      const newSession: ChatSession = {
+                        id: data.session_id,
+                        lastMessage: streamedContent,
+                        sessionName: "How can I help you?", // Default name from backend
+                      };
+                      setChatSessions((prev) => [newSession, ...prev]);
+                      if (newChatSessionBtnRef.current) {
+                        newChatSessionBtnRef.current.disabled = false;
+                      }
                     }
 
                     // Update final message with timestamp and initialize versions
