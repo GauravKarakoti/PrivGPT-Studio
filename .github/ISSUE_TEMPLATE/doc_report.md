@@ -18,7 +18,7 @@ labels: documentation
 
 # Checklist
 <!-- Please delete the options that are not relevant to you. -->
-- [ ] I am a GSSoC'25 contributor
+- [ ] I am a ECWoC'26 contributor
 
 
 # Additional Context
