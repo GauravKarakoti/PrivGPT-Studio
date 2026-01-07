@@ -207,7 +207,7 @@ export function SignUpForm() {
                   <FormItem>
                     <FormLabel>Date of Birth</FormLabel>
                     <FormControl>
-                      <Input type="date" {...field} />
+                      <Input type="date" className="dark:[color-scheme:dark]" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
