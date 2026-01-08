@@ -126,7 +126,7 @@ export default function Footer() {
                 aria-label="Discord"
                 className="hover:text-foreground transition"
               >
-                <AiOutlineDiscord className="w-6 h-6" />
+                <AiOutlineDiscord className="w-7 h-8 -m-1" />
               </a>
 
               {/* Email */}
