@@ -1,9 +1,8 @@
----
+<!---
 name: 💭 Other issue
 about: For general questions, suggestions, or anything not covered above
 title: "OTHER: <brief description>"
-labels: enhancement
----
+--->
 
 <!-- Thank you for taking the time to contribute! 🙌 -->
 
