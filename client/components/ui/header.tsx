@@ -1,10 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Zap, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -46,12 +46,21 @@ export default function header() {
           <nav className="hidden md:flex items-center space-x-4">
             <Link
               href="/"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Home
             </Link>
-            <Link href="/about">
-              <Button variant="ghost">About Us</Button>
+            <Link 
+              href="/about"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              About Us
+            </Link>
+            <Link 
+              href="/pricing"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Pricing
             </Link>
             <Link href={token ? "/chat" : "/sign-in?redirect=/chat"}>
               <Button variant="outline">Try Chat</Button>
@@ -91,6 +100,17 @@ export default function header() {
                       onClick={closeMobileMenu}
                     >
                       About Us
+                    </Button>
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href="/pricing">
+                    <Button
+                      variant="ghost"
+                      className="w-full justify-start"
+                      onClick={closeMobileMenu}
+                    >
+                      Pricing
                     </Button>
                   </Link>
                 </SheetClose>
