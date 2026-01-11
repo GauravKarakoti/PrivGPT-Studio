@@ -1,8 +1,10 @@
-<!--
+---
 name: 🐛 Bug report
 about: Report a bug to help us improve
-title: "BUG: <brief description>"
--->
+title: "BUG: "
+labels: bug
+---
+
 
 <!-- Thank you for taking the time to contribute! 🙌 -->
 
