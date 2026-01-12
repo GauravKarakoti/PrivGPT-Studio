@@ -94,6 +94,9 @@ def get_profile():
         return jsonify({
             'username': user.get('username'),
             'email': user.get('email'),
+            'gender': user.get('gender'),
+            'dob': user.get('dob'),
+            'phone': user.get('phone'),
         }), 200
     except Exception as e:
         return jsonify({'message': 'Invalid token', 'error': str(e)}), 401
